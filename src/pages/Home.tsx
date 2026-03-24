@@ -49,7 +49,7 @@ const Home = () => {
               
               <div className="flex flex-wrap gap-10 pt-10 border-t border-white/10">
                 <div>
-                  <strong className="block text-4xl font-black text-white leading-none font-heading">200+</strong>
+                  <strong className="block text-4xl font-black text-white leading-none font-heading">10+</strong>
                   <span className="text-sm text-white/60 mt-2 block font-medium">Projects Delivered</span>
                 </div>
                 <div className="hidden sm:block w-px bg-white/10"></div>
@@ -59,7 +59,7 @@ const Home = () => {
                 </div>
                 <div className="hidden sm:block w-px bg-white/10"></div>
                 <div>
-                  <strong className="block text-4xl font-black text-white leading-none font-heading">10+</strong>
+                  <strong className="block text-4xl font-black text-white leading-none font-heading">2+</strong>
                   <span className="text-sm text-white/60 mt-2 block font-medium">Years Experience</span>
                 </div>
               </div>

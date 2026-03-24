@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply text-[#3a4157] bg-white overflow-x-hidden antialiased;
+  }
+  h1, h2, h3, h4, h5 {
+    @apply font-heading font-bold text-brand-blue tracking-tight leading-tight;
+  }
+  h1 { font-size: clamp(2.5rem, 5vw, 4.2rem); line-height: 1.1; letter-spacing: -0.02em; }
+  h2 { font-size: clamp(2rem, 3.5vw, 3rem); letter-spacing: -0.01em; }
+  h3 { font-size: clamp(1.4rem, 2.5vw, 1.8rem); }
+  h4 { @apply text-xl font-bold; }
+  p { @apply mb-4 leading-relaxed font-sans; }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center gap-2 bg-btn-gradient text-white font-bold py-3.5 px-8 rounded-full whitespace-nowrap transition-all duration-300 hover:-translate-y-1 hover:shadow-glow-red overflow-hidden relative;
+  }
+  .btn-primary::after {
+    content: '';
+    @apply absolute inset-0 bg-white/20 opacity-0 transition-opacity duration-300;
+  }
+  .btn-primary:hover::after {
+    @apply opacity-100;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 bg-transparent text-white border border-white/40 font-bold py-3.5 px-8 rounded-full whitespace-nowrap transition-all duration-300 hover:bg-white hover:text-brand-blue hover:shadow-glow-blue;
+  }
+  .btn-dark {
+    @apply inline-flex items-center gap-2 bg-brand-blue border border-brand-blue-light text-white font-bold py-3.5 px-8 rounded-full whitespace-nowrap transition-all duration-300 hover:bg-brand-blue-light hover:-translate-y-1 hover:shadow-glow-blue;
+  }
+  .section-label {
+    @apply inline-block text-sm font-heading font-bold tracking-[0.1em] uppercase text-brand-red mb-4;
+  }
+  .section-padding {
+    @apply py-20 md:py-28;
+  }
+  
+  /* Duotone Image Utility removed */
+  .img-normal::before, .img-normal::after {
+    display: none;
+  }
+}
+
